@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Июл 12 2021 г., 10:42
+-- Время создания: Июл 12 2021 г., 10:52
 -- Версия сервера: 10.4.19-MariaDB
 -- Версия PHP: 7.3.28
 
@@ -168,7 +168,10 @@ CREATE TABLE `product_order` (
   `products` text NOT NULL,
   `user_id` int(11) NOT NULL,
   `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `status` varchar(55) NOT NULL
+  `status` varchar(55) NOT NULL,
+  `price_sklad` int(11) NOT NULL,
+  `price_admin` int(11) NOT NULL,
+  `income` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
